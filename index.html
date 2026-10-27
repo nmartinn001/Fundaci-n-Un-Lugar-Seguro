@@ -9,13 +9,15 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+  <link rel="stylesheet" href="css/style.css">
+
 <title>NIDO | Un Lugar Seguro</title>
 </head>
 <body>
 
 <header class="headerNIDO"> <!--Encabezado de mi Página - Considerrar CLASS para darle Estilo en el CSS-->
       <div class="logo">
-        <img src="LOGO.png" alt="Logo fundación NIDO " class="logo">
+        <img src="img/LOGO.png" alt="Logo fundación NIDO " class="logo">
         
       </div>
       
@@ -36,7 +38,7 @@
 <section id="inicio" class="hero-NIDO">
       <div class="video-background">
         <video autoplay="" muted="" loop="" playsinline="">
-          <source src="NIDO-VIDEO.mp4" type="video/mp4">
+          <source src="img/video.mp4" type="video/mp4">
           Tu navegador no soporta video en HTML5.
         </video>
       </div>
@@ -55,9 +57,56 @@
       </div>
       </div>
       
+    </section><!--AQUI TERMINA TODO LO DE HERO, DONDE ESTA MI VIDEO Y LOS DOS BOTONES-->
+    <!--INICIO SECCIÓN NOSTROS, MISION, ETC..-->
+
+     <section id="quienes-somos" class="quienes-somos">
+      <h2>Quiénes Somos</h2>
+      <div class="content">
+        <p>Somos una organización dedicada al  apoyo a personas en situación de calle mediante 
+          alimentos, ropa, artículos de higiene y orientación para acceder a servicios.</p>
+      </div>
     </section>
 
   </main>
+
+<footer id="contacto-NIDO">
+
+  <div class="footer-grid">
+      <div class="contacto">
+        <h3>Contacto</h3>
+        <address>
+          <p>
+            <i class="fa fa-map-marker-alt"></i>
+            <a href="https://maps.app.goo.gl/T24LSSQpk4H8SteZA" target="_blank" rel="noreferrer noopener">
+            <span style="color: #b9ddff; font-weight: bold">Ubicación: </span> Lomas Lindas Cdad. López Mateos, Méx.
+            </a>
+          </p>
+          <p>
+            <i class="fa fa-phone"></i>
+            <span style="color: #b9ddff; font-weight: bold">Teléfono: </span> <a href="tel:+5534496096"> 55 3449 6096</a>
+          </p>
+        </address>
+      </div>
+      
+      <div class="redes-sociales">
+        <h3>Síguenos en redes sociales</h3>
+        <div class="redes-iconos">
+          <a href="https://www.facebook.com/?locale=es_LA" aria-label="Síguenos en Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/nicole.mnissen?stkn=MW9yaDJxdXZweXQzYw%3D%3D&utm_source=qr" aria-label="Síguenos en Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@nicole.mnissen?_r=1&_t=ZS-9AIpFgVmEQW" aria-label="Síguenos en TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+
+  <div class="footer-bottom">
+      <button onclick="scrollToTop()" class="scroll-to-top-btn" aria-label="Volver al inicio de la página">
+        <i class="fa fa-arrow-up"></i>
+      </button>
+
+  <p class="copyright">&copy; 2026 Fundación NIDO. Todos los derechos reservados.</p>
+
+</footer>
 
 </body>
 </html>
