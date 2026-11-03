@@ -5,28 +5,28 @@ const dwnicole = [
     id: 1,
     name: "El comienzo de una nueva oportunidad",
     image: "img/foto8.jpg",
-    genero: "donaciones",
+    genero: "voluntario",
     description: "Cada donación, sin importar su tamaño, nos acerca a construir un futuro con más esperanza y mejores condiciones de vida."
   },
   {
     id: 2,
     name: "Tu tiempo es nuestra mejor donación.",
     image: "img/foto5.jpeg",
-    genero: "donaciones",
+    genero: "voluntario",
     description: "Compartir tu tiempo, tus habilidades y tu corazón para ayudar a quienes más lo necesitan nos ayuda a crear un entorno más seguro y con más esperanza."
   },
   {
     id: 3,
     name: "Una prenda puede brindar abrigo y esperanza.",
     image: "img/foto2.png",
-    genero: "donaciones",
+    genero: "voluntario",
     description: "Cada prenda en buen estado puede hacer la diferencia y convertirse en una oportunidad para que alguien se sienta cuidado y protegido."
   },
   {
     id: 4,
     name: "Compartir alimentos es brindar bienestar.",
     image: "img/foto1.jpeg",
-    genero: "donaciones",
+    genero: "voluntario",
     description: "Ayuda a cubrir las necesidades básicas de quienes más lo necesitan. Cada alimento compartido es un acto de solidaridad que brinda apoyo."
   },
 
@@ -75,15 +75,17 @@ function renderDw(categoriaSeleccionada) {
   const dwnicoleContainer = document.getElementById("donaciones-container");
   if (!dwnicoleContainer) return;
 
-  const categoriaLimpia = normalizarTexto(categoriaSeleccionada);
+  const categoriaLimpia = normalizarTexto(categoriaSeleccionada).replace(/[-_]/g, " ");
   let dwnicoleToRender = [];
 
-  if (["todos", "todas", "all", "apoyo economico"].includes(categoriaLimpia)) {
+  if (["apoyo-económico", "todos", "todas", "all"].includes(categoriaLimpia)) {
     // Si elige 'apoyo económico', muestra TODAS las tarjetas ordenadas aleatoriamente (mezcladas)
     dwnicoleToRender = [...dwnicole].sort(() => Math.random() - 0.5);
-  } else if (["donaciones", "voluntario", "voluntariado"].includes(categoriaLimpia)) {
+  } else if (["voluntario", "voluntariado"].includes(categoriaLimpia)) {
     // Si elige 'voluntario', muestra las tarjetas etiquetadas como 'donaciones'
-    dwnicoleToRender = dwnicole.filter(item => normalizarTexto(item.genero) === "donaciones");
+    dwnicoleToRender = dwnicole.filter(item =>
+      ["voluntario", "voluntariado"].includes(normalizarTexto(item.genero))
+    );
   } else {
     // Para 'unete' o cualquier otra categoría exacta
     dwnicoleToRender = dwnicole.filter(item => normalizarTexto(item.genero) === categoriaLimpia);
@@ -117,27 +119,39 @@ document.addEventListener("DOMContentLoaded", () => {
   const filterButtons = document.querySelectorAll(".filter-btn");
 
   filterButtons.forEach(button => {
-    button.addEventListener("click", (e) => {
+    button.addEventListener("click", e => {
       e.preventDefault();
-      
-      // Remueve activo de todos y lo pone en el clickeado
       filterButtons.forEach(btn => btn.classList.remove("active"));
       button.classList.add("active");
-
-      // Lee el data-category del botón
-      const categoria = button.getAttribute("data-category");
-      renderDw(categoria);
+      renderDw(button.dataset.category);
     });
   });
 
   // Carga inicial: Muestra todas las tarjetas mezcladas
-  renderDw("apoyo económico");
+  renderDw("apoyo-económico");
+
+  // Botón de volver al inicio
+  const botonInicio = document.querySelector(".scroll-to-top-btn");
+
+  botonInicio?.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 });
 
-// Función para subir al inicio
-function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
+// Botón para volver al inicio
+  document.addEventListener("click", (e) => {
+    const boton = e.target.closest(".scroll-to-top-btn");
+    if (!boton) return;
+
+    e.preventDefault();
+    document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
+    document.body.scrollTo({ top: 0, behavior: "smooth" });
   });
-}
+
+  // Función para el botón de volver al inicio
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+};
