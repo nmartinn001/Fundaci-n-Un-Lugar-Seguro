@@ -259,8 +259,8 @@
   }
   
   .column img {
-  border: 7px solid #251D82;
-  border-radius: 15px;
+  border: 3px solid #dfe07e;
+  border-radius: 10px;
   }
 
 
@@ -276,6 +276,24 @@
   content: "";
   clear: both;
   display: table;
+  }
+
+  /*Aside para las ferias, promociones y eventos*/
+  .beneficios {
+  text-align: center;
+  background-color: #b9ddff;
+  padding: 50px 20px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  }
+  
+  .beneficios h3 {
+  color: #333;
+  margin-bottom: 40px;
+  }
+  
+  .beneficios p {
+  margin-bottom: 10px;
   }
 
  /* Pie de página (footer) */

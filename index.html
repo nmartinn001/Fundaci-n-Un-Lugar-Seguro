@@ -1,149 +1,170 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="description" content="Página de la Fundación Un Lugar Seguro">
   <meta name="keywords" content="Apoyo, Calle, Personas, Bienestar, Solidaridad, Seguro">
   <meta name="author" content="Nicole Martin Nissen">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
   <link rel="stylesheet" href="css/style.css">
 
-<title>NIDO | Un Lugar Seguro</title>
+  <title>NIDO | Un Lugar Seguro</title>
 </head>
 <body>
 
-<header class="headerNIDO"> <!--Encabezado de mi Página - Considerrar CLASS para darle Estilo en el CSS-->
-      <div class="logo">
-        <img src="img/LOGO.png" alt="Logo fundación NIDO " class="logo">
-        
-      </div>
-      
-      <nav class="nav">
-        <ul>
-          <li><a href="#inicio" class="nav-button">Inicio</a></li>
-          <li><a href="#quienes-somos" class="nav-button">Nosotros</a></li>
-          <li><a href="#donaciones" class="nav-button">Donaciones</a></li>
-          <li><a href="#voluntariado" class="nav-button">Voluntariado</a></li>
-          <li><a href="#contacto" class="nav-button">Contacto</a></li>
-        </ul>
-      </nav>
+  <header class="headerNIDO">
+    <div class="logo">
+      <img src="img/LOGO.png" alt="Logo fundación NIDO" class="logo">
+    </div>
     
+    <nav class="nav">
+      <ul>
+        <li><a href="#inicio" class="nav-button">Inicio</a></li>
+        <li><a href="#quienes-somos" class="nav-button">Nosotros</a></li>
+        <li><a href="#donaciones" class="nav-button">Donaciones</a></li>
+        <li><a href="#voluntariado" class="nav-button">Voluntariado</a></li>
+        <li><a href="#contacto-NIDO" class="nav-button">Contacto</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-
-<section id="inicio" class="hero-NIDO">
+    <section id="inicio" class="hero-NIDO">
       <div class="video-background">
-        <video autoplay="" muted="" loop="" playsinline="">
+        <video autoplay muted loop playsinline>
           <source src="img/video.mp4" type="video/mp4">
           Tu navegador no soporta video en HTML5.
         </video>
       </div>
 
-
       <div class="hero-content">
         <h2>BIENVENIDOS A NIDO</h2>
-        <p>Cuidamos y apoyamos a  personas en situación de calle.</p>
-
-
-
+        <p>Cuidamos y apoyamos a personas en situación de calle.</p>
 
         <div class="hero-buttons">
-        <a href="XXXX" class="btn">Dona</a>
-        <a href="XXXX" class="btn">Se Voluntario</a>
-      </div>
-      </div>
-      
-    </section><!--AQUI TERMINA TODO LO DE HERO, DONDE ESTA MI VIDEO Y LOS DOS BOTONES-->
-    <!--INICIO SECCIÓN NOSTROS, MISION, ETC..-->
-
-     <section id="quienes-somos" class="quienes-somos">
-      <h2>Quiénes Somos</h2>
-      <div class="content">
-        <p>Somos una organización dedicada al  apoyo a personas en situación de calle mediante 
-          alimentos, ropa, artículos de higiene y orientación para acceder a servicios.</p>
+          <a href="https://sebien.cdmx.gob.mx/personas-en-situacion-calle-y-abandono-social" class="btn">Dona</a>
+          <a href="https://www.mivaledor.com/?srsltid=AYCX9vLk0FUVDzzOPgipHFSoiYN8fiRKJtIngho1Zy1jbMXmgZ3aUfUE" class="btn">Sé Voluntario</a>
+        </div>
       </div>
     </section>
 
-  <section id="donaciones" class="Donaciones">
-      <h2> ¿Qué puedo donar? </h2>
+    <section id="quienes-somos" class="quienes-somos">
+      <h2>Quiénes Somos</h2>
+      <div class="content">
+        <p>Somos una organización dedicada al apoyo a personas en situación de calle mediante alimentos, ropa, artículos de higiene y orientación para acceder a servicios.</p>
+      </div>
+    </section>
+
+    <section id="donaciones" class="donaciones">
+      <h2>¿Qué puedo donar?</h2>
       <div class="filter-buttons">
-        <button class="filter-btn" data-category="apoyo económico">Apoyo Económico</button>
-        <button class="filter-btn" data-category="alimentos">Alimentos</button>
-        <button class="filter-btn active" data-category="vestimenta">Vestimenta</button>
+        <button class="filter-btn active" data-category="apoyo económico">Apoyo Económico</button>
+        <button class="filter-btn" data-category="voluntario">Voluntariado</button>
+        <button class="filter-btn" data-category="únete">Únete</button>
       </div>
 
-  <!--AQUÍ VA LA PRIMERA CARD-->
-  <div id="donaciones-container">
-            <figure class="donaciones-card" data-gender="donaciones">
-                <img src="img/foto8.jpg" alt="Apoyo Económico">
-                <figcaption>
-                El comienzo de una nueva oportunidad
-            </figcaption>
-                <div class="card-description">
-                    <p>Cada donación, sin importar su tamaño, nos acerca a 
-                      construir un futuro con más esperanza y mejores 
-                      condiciones de vida.</p>
-                </div>
-            </figure>
+      <div id="donaciones-container">
+        <!-- Tarjetas de Apoyo Económico -->
+        <figure class="donaciones-card" data-category="apoyo económico">
+          <img src="img/foto8.jpg" alt="Apoyo Económico">
+          <figcaption>El comienzo de una nueva oportunidad</figcaption>
+          <div class="card-description">
+            <p>Cada donación, sin importar su tamaño, nos acerca a construir un futuro con más esperanza y mejores condiciones de vida.</p>
+          </div>
+        </figure>
 
-  <!--AQUÍVA MI SEGUNDA CARD-->
-   <div id="donaciones-container">
-            <figure class="donaciones-card" data-gender="donaciones">
-                <img src="img/foto5.jpeg" alt="Apoyo Económico">
-                <figcaption>
-                Tu tiempo es nuestra mejor donación.
-            </figcaption>
-                <div class="card-description">
-                    <p>Compartir tu tiempo, tus habilidades y 
-                      tu corazón para ayudar a quienes más lo necesitan nos 
-                      ayuda a crear un entorno más seguro y con más esperanza.</p>
-                </div>
-            </figure>
+        <figure class="donaciones-card" data-category="voluntario">
+          <img src="img/foto5.jpeg" alt="Voluntariado">
+          <figcaption>Tu tiempo es nuestra mejor donación.</figcaption>
+          <div class="card-description">
+            <p>Compartir tu tiempo, tus habilidades y tu corazón para ayudar a quienes más lo necesitan nos ayuda a crear un entorno más seguro y con más esperanza.</p>
+          </div>
+        </figure>
 
-  <!--AQUÍ VA MI TERCERA CARD-->
-   <div id="donaciones-container">
-            <figure class="donaciones-card" data-gender="donaciones">
-                <img src="img/foto2.png" alt="Apoyo Económico">
-                <figcaption>
-                Una prenda puede brindar abrigo y esperanza.
-            </figcaption>
-                <div class="card-description">
-                    <p>Cada prenda en buen estado puede hacer la diferencia y 
-                      convertirse en una oportunidad para que alguien se sienta 
-                      cuidado y protegido.</p>
-                </div>
-            </figure>
+        <figure class="donaciones-card" data-category="apoyo económico">
+          <img src="img/foto2.png" alt="Donación de ropa">
+          <figcaption>Una prenda puede brindar abrigo y esperanza.</figcaption>
+          <div class="card-description">
+            <p>Cada prenda en buen estado puede hacer la diferencia y convertirse en una oportunidad para que alguien se sienta cuidado y protegido.</p>
+          </div>
+        </figure>
 
-  <!--AQUÍ VA MI CUARTA CARD-->
-  <div id="donaciones-container">
-            <figure class="donaciones-card" data-gender="donaciones">
-                <img src="img/foto1.jpeg" alt="Apoyo Económico">
-                <figcaption>
-                Compartir alimentos es brindar bienestar.
-            </figcaption>
-                <div class="card-description">
-                    <p>Ayuda a cubrir las necesidades básicas de quienes más lo necesitan. 
-                      Cada alimento compartido es un acto de solidaridad que brinda apoyo.</p>
-                </div>
-            </figure>
+        <figure class="donaciones-card" data-category="apoyo económico">
+          <img src="img/foto1.jpeg" alt="Donación de alimentos">
+          <figcaption>Compartir alimentos es brindar bienestar.</figcaption>
+          <div class="card-description">
+            <p>Ayuda a cubrir las necesidades básicas de quienes más lo necesitan. Cada alimento compartido es un acto de solidaridad que brinda apoyo.</p>
+          </div>
+        </figure>
 
+        <!-- Tarjetas de Únete -->
+        <figure class="donaciones-card" data-category="únete">
+          <img src="img/foto4.jpeg" alt="Únete">
+          <figcaption>Sé parte del Cambio</figcaption>
+          <div class="card-description">
+            <p>Únete a nuestra fundación y ayúdanos a construir una comunidad más solidaria. No necesitas hacer grandes cosas para marcar la diferencia; tu compromiso y tus ganas de ayudar son un gran comienzo.</p>
+          </div>
+        </figure>
+
+        <figure class="donaciones-card" data-category="únete">
+          <img src="img/foto7.jpeg" alt="Únete">
+          <figcaption>Juntos Hacemos Más.</figcaption>
+          <div class="card-description">
+            <p>Cada voluntario aporta algo único. Al trabajar en equipo, podemos organizar actividades, brindar apoyo y crear un entorno donde las personas se sientan acompañadas y protegidas.</p>
+          </div>
+        </figure>
+
+        <figure class="donaciones-card" data-category="únete">
+          <img src="img/foto3.png" alt="Únete">
+          <figcaption>Cada Gesto Cuenta</figcaption>
+          <div class="card-description">
+            <p>Tu disposición para ayudar puede mejorar el día de alguien. Con pequeñas acciones y trabajo en equipo, podemos brindar apoyo a quienes más lo necesitan y crear un ambiente de confianza y solidaridad.</p>
+          </div>
+        </figure>
+
+        <figure class="donaciones-card" data-category="únete">
+          <img src="img/foto6.jpeg" alt="Únete">
+          <figcaption>Tus Manos Pueden Ayudar</figcaption>
+          <div class="card-description">
+            <p>Tu participación nos permite llegar a más personas y ofrecer ayuda a quienes atraviesan momentos difíciles.</p>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+<!--Vamos a colocar 3 imágenes representen algo de la fundación-->
+    <div class="row">
+      <h3>Nuestra Fundación</h3>
+      <div class="column">
+        <img src="img/nidoimg1.png" alt="Voluntariado" style="width:80%; height:20%;">
+      </div>
+      <div class="column">
+        <img src="img/nidoimg2.png" alt="Proyectos" style="width:80%; height:20%;">
+      </div>
+      <div class="column">
+        <img src="img/nidoimg3.png" alt="Beneficios" style="width:80%; height:20%;">
+      </div>  
+    </div>
 
   </main>
 
-<footer id="contacto-NIDO">
+  <aside class="beneficios">
+    <h3>Invita a un Amigo</h3>
+    <p>¡Durante todo el mes de<b> noviembre</b>, invita a un amigo a conocer nuestra fundación y ayúdanos a crear más espacios seguros para quienes lo necesitan!</p>
+    <p>Por cada amigo que se una a nuestra comunidad,te dara <span style="font-weight: bold; color: #251D82"> 2 boletos para el Flow Fest</span> estaremos más cerca de brindar apoyo, compañía y nuevas oportunidades a quienes más lo necesitan.</p>
+  </aside>
 
-  <div class="footer-grid">
+  <footer id="contacto-NIDO">
+    <div class="footer-grid">
       <div class="contacto">
         <h3>Contacto</h3>
         <address>
           <p>
             <i class="fa fa-map-marker-alt"></i>
             <a href="https://maps.app.goo.gl/T24LSSQpk4H8SteZA" target="_blank" rel="noreferrer noopener">
-            <span style="color: #b9ddff; font-weight: bold">Ubicación: </span> Lomas Lindas Cdad. López Mateos, Méx.
+              <span style="color: #b9ddff; font-weight: bold">Ubicación: </span> Lomas Lindas Cdad. López Mateos, Méx.
             </a>
           </p>
           <p>
@@ -152,7 +173,7 @@
           </p>
         </address>
       </div>
-      
+
       <div class="redes-sociales">
         <h3>Síguenos en redes sociales</h3>
         <div class="redes-iconos">
@@ -163,14 +184,14 @@
       </div>
     </div>
 
-  <div class="footer-bottom">
+    <div class="footer-bottom">
       <button onclick="scrollToTop()" class="scroll-to-top-btn" aria-label="Volver al inicio de la página">
         <i class="fa fa-arrow-up"></i>
       </button>
+      <p class="copyright">&copy; 2026 Fundación NIDO. Todos los derechos reservados.</p>
+    </div>
+  </footer>
 
-  <p class="copyright">&copy; 2026 Fundación NIDO. Todos los derechos reservados.</p>
-
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
